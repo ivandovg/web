@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#main{
+    width: 500px;
+    margin: 0 auto;
+    border-left: 3px solid lightgreen;
+    min-height: 100vh;
+}
+
+.page-header, .page-footer, .page-content{
+    padding: 3px;
+    margin: 5px;
+}
+
+.page-header, .page-footer{
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid green;
+}
+
+.page-header{
+    font-size: 2rem;
+}
+
+.page-footer{
+    font-size: 0.75rem;
+}
+
+.page-content{
+    border: 2px solid blue;
+}
+
+.page-content > p{
+    color: brown;
+    border: 1px solid red;
+    margin: 5px;
+    padding: 3px;
+}
+
+div + footer{
+    background-color: bisque;
+}
+
+p + footer{
+    background-color: blueviolet;
+}
+
+.page-header + .d1{
+    background-color: aqua;
+    min-height: 80px;
+}
+
+#main > *{
+    text-decoration: dotted;
+}
