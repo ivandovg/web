@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    width: 80vw;
+    margin: 10px auto;
+    background-color: lightcyan;
+    position: relative;
+    border-radius: 5px;
+}
+
+#main-nav{
+    background: #ccfebc;
+    background: linear-gradient(-90deg,#ccfebc 0%, #84ec84 80%);
+    background: -webkit-linear-gradient(-90deg,#ccfebc 0%, #84ec84 80%);
+    background: -moz-linear-gradient(-90deg,#ccfebc 0%, #84ec84 80%);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+}
+
+#main-nav ul{
+    margin-left: 40px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+
+#main-nav ul ul{
+    display: none;
+}
+
+#main-nav ul li:hover ul{
+    display: block;
+}
+
+.post{
+    margin: 7px;
+    border: 1px solid navy;
+    padding: 5px;
+    background-color: cornsilk;
+}
+
+.post > header{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 7px;
+    text-indent: 1.5rem;
+}
+
+.post > p{
+    text-align: justify;
+    text-indent: 1.5rem;
+}
+
+#post2{
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+#post2 > header{
+    color: darkorchid;
+}
+
+#post2:hover p{
+    color: blue;
+}
+
+#callback{
+    width: 300px;
+    background-color: gray;
+    height: 150px;
+    position: fixed;
+    z-index: 10;
+    top: 70vh;
+    left: -300px;
+    transition: all 0.8s linear 0s;
+}
+
+#callback > p{
+    padding: 20px;
+    color: white;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#callback::after{
+    content: "Обратная связь";
+    background-color: darksalmon;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    left: 300px;
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    padding-top: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+}
+
+#callback:hover{
+    left: 0;
+}
