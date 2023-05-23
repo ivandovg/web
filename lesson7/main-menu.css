@@ -1,0 +1,91 @@
+#main-nav{
+    /* --hover-back-color: #e9e0d5; */
+    --hover-back-color: rgb(228, 214, 210);
+    background: #faebd7;
+    background: linear-gradient(270deg,#faebd7 0%, #deb887 80%);
+    background: -webkit-linear-gradient(270deg,#faebd7 0%, #deb887 80%);
+    background: -moz-linear-gradient(270deg,#faebd7 0%, #deb887 80%);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    text-align: center;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+}
+
+#main-nav ul{
+    /* margin-left: 40px; */
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+
+#main-nav ul::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#main-nav ul ul{
+    display: none;
+}
+
+#main-nav ul li{
+    float: left;
+}
+
+#main-nav ul li:hover > ul{
+    display: block;
+}
+
+#main-nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: gray;
+    padding: 10px 20px;
+}
+
+/* #main-nav ul li:hover a{
+    color: whitesmoke;
+} */
+
+#main-nav ul li a:hover{
+    color: whitesmoke;
+}
+
+#main-nav ul li:hover{
+    background-color: var(--hover-back-color);
+    border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    -moz-border-radius: 3px 3px 0px 0px;
+}
+
+#main-nav ul ul{
+    position: absolute;
+    background-color: var(--hover-back-color);
+    padding: 0;
+    top: 100%;
+}
+
+#main-nav ul ul li{
+    float: none;
+    position: relative;
+    background-color: var(--hover-back-color);
+}
+
+#main-nav ul ul li a:hover{
+    background-color: silver;
+}
+
+#main-nav ul ul ul{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 100%;
+}
