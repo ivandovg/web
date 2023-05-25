@@ -70,6 +70,7 @@
 .register-form [type="email"],
 .register-form [type="submit"],
 .register-form [type="reset"],
+.register-form [type="tel"],
 #btnCustom{
     padding: 7px 10px;
     border: 3px solid green;
@@ -79,7 +80,8 @@
 
 .register-form [type="text"]:focus,
 .register-form [type="password"]:focus,
-.register-form [type="email"]:focus{
+.register-form [type="email"]:focus,
+.register-form [type="tel"]:focus{
     border: 3px solid yellow;
     outline: none;
 }
@@ -117,10 +119,6 @@
     transition: all .4s;
 }
 
-/* .radio-test [type="radio"] + span{
-    color: yellow;
-} */
-
 .radio-test [type="radio"]:checked + span{
     color: green;
 }
@@ -137,6 +135,13 @@
 #userLicense1 + span,
 #userLicense2 + span{
     position: relative;
+    transition: all .8s;
+}
+
+#userLicense1 + span:hover,
+#userLicense2 + span:hover{
+    color: white;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.7);
 }
 
 #userLicense1 + span::before,
@@ -177,5 +182,9 @@
     .register-form > div{
         flex-direction: column;
         justify-content: space-around;
+    }
+
+    .register-form > div > ul + ul{
+        margin-top: 20px;
     }
 }
